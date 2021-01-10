@@ -1,6 +1,6 @@
 # Civic Tech Webring
 
-The **Civic Tech Webring** is a collection of blogs dedicated to civic tech, public interest tech, government tech policy, and similar topics.  You can [view all of the members on the main page](http://localhost:8000/civic-tech-webring/).
+The **Civic Tech Webring** is a collection of blogs dedicated to civic tech, public interest tech, government tech policy, and similar topics.  You can [view all of the members on the main page](https://billhunt.dev/civic-tech-webring/).
 
 ## Joining
 
