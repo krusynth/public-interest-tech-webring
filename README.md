@@ -26,13 +26,15 @@ To join the webring, please [open a request to add a new site through GitHub iss
 You can show the webring on your site by pasting the following html snippet wherever you want it to appear:
 
 ```
-  <script src="https://cdn.jsdelivr.net/gh/krusynth/civic-tech-webring/webring.js"></script>
+  <script src="https://static.billhunt.dev/civictech/webring.js"></script>
   <script>showWebring(true);</script>
 ```
 
 If you'd like to disable the default styles, you can use this snippet instead:
 
 ```
-  <script src="https://cdn.jsdelivr.net/gh/krusynth/civic-tech-webring/webring.js"></script>
+  <script src="https://static.billhunt.dev/civictech/webring.js"></script>
   <script>showWebring();</script>
 ```
+
+(You can, of course, also [download the `webring.js` file from GitHub](https://github.com/krusynth/civic-tech-webring/blob/main/webring.js) and host it yourself, but it'll be up to you to keep this file up-to-date as changes are made!)
