@@ -52,7 +52,7 @@ function showWebring(useStyles) {
           <a href="${prev.url}" class="CTW-link-name">${prev.name}</a>
         </a></li>
         <li class="CTW-link CTW-link-next">
-          <a href="${next.name}" class="CTW-link-name">${next.name}</a>
+          <a href="${next.url}" class="CTW-link-name">${next.name}</a>
           <span class="CTW-link-direction">&rarr;</span>
         </a></li>
       </ul></nav>
