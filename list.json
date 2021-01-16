@@ -2,13 +2,18 @@
   "sites": [
     {
       "name": "Bill Hunt's Blog",
-      "url": "https://billhunt.dev",
+      "url": "https://billhunt.dev/",
       "author": "Bill Hunt <hello@billhunt.email>"
     },
     {
       "name": "Zagaja.com",
       "url": "https://www.zagaja.com/",
-      "author": " Matt Zagaja <mattz@codeforboston.org>"
+      "author": "Matt Zagaja <mattz@codeforboston.org>"
+    },
+    {
+      "name": "Hunter Owens",
+      "url": "https://hunterowens.net/",
+      "author": "Hunter Owens <hunter@hunterowens.net>"
     }
   ]
 }
