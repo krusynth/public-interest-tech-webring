@@ -22,7 +22,9 @@ You may request your site to be added to the webring if it meets the following c
 
 To join the webring, please [open a request to add a new site through GitHub issues](https://github.com/krusynth/civic-tech-webring/issues/new/choose).
 
-### Adding the Code
+### Adding the Banner
+
+#### Self-Hosted Websites
 You can show the webring on your site by pasting the following html snippet wherever you want it to appear:
 
 ```
@@ -38,3 +40,16 @@ If you'd like to disable the default styles, you can use this snippet instead:
 ```
 
 (You can, of course, also [download the `webring.js` file from GitHub](https://github.com/krusynth/civic-tech-webring/blob/main/webring.js) and host it yourself, but it'll be up to you to keep this file up-to-date as changes are made!)
+
+
+#### Hosted Blogs
+
+If you're using a hosted website which does not allow JavaScript, you can use a static version instead, either on your bio and/or each post.  You can [use this tool to generate the code](https://billhunt.dev/civic-tech-webring/).
+
+## This Repo
+
+This repo contains the following files which are used to serve the webring:
+
+* [list.json](list.json) - The list of member sites.
+* [webring.js](webring.js) - The main JavaScript file for showing the webring.
+* [webring.html](webring.html) - A static html page used for redirects when the JavaScript file can't be used on a webpage.
