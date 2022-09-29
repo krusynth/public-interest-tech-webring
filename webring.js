@@ -27,7 +27,7 @@ function showWebring(useStyles) {
 
     let current;
     for(let i = 0; i < sites.length; i++) {
-      if(window.location.href.substr(0, url.length) === sites[i].url) {
+      if(window.location.href.substr(0, sites[i].url.length) === sites[i].url) {
         current = i;
         break;
       }
