@@ -5,7 +5,7 @@ document.write('<div id="ctwebring"></div>');
 function showWebring(useStyles) {
   let elm = 'ctwebring';
 
-  const url = '{{ site.url }}{{ site.baseurl }}list.json';
+  const url = '{{ "list.json" | absolute_url }}';
 
   let req = new XMLHttpRequest();
   req.open('GET', url, true);
