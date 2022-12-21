@@ -4,7 +4,7 @@ title: Join
 permalink: /join/
 ---
 <p>
-  The Public Interest Tech Webring is a collection of blogs dedicated to civic tech, public interest tech, government tech policy, and similar topics.
+  {{ site.description }}
 </p>
 <p>
   If you post about the topics above, we'd love for you to join our webring! We do ask that you meet the following requirements:
@@ -24,7 +24,7 @@ permalink: /join/
   Additionally, we strongly recommend that your blog have an RSS feed. If it does, we'll include it in our <a href="/feeds.opml">OPML file</a> and include your content in our recent posts list.
 </p>
 <p>
-  To join the webring, please <a class="button" href="https://github.com/krusynth/civic-tech-webring/issues/new/choose">open a request</a> to add a new site through GitHub issues.
+  To join the webring, please <a class="button" href="https://github.com/{{ site.repository }}/issues/new/choose">open a request</a> to add a new site through GitHub issues.
 </p>
 <p>
   After you’re approved, you’ll need to add the webring code to your website:
@@ -35,14 +35,14 @@ permalink: /join/
   You can show the webring on your site by pasting the following html snippet wherever you want it to appear:
 </p>
 
-<textarea class="code-snippet"><script src="https://static.billhunt.dev/civictech/webring.js"></script>
+<textarea class="code-snippet"><script src="{{ 'webring.js' | absolute_url }}"></script>
 <script>showWebring(true);</script></textarea>
 
 <p>
   If you'd like to disable the default styles, you can use this snippet instead:
 </p>
 
-<textarea class="code-snippet"><script src="https://static.billhunt.dev/civictech/webring.js"></script>
+<textarea class="code-snippet"><script src="{{ 'webring.js' | absolute_url }}"></script>
 <script>showWebring();</script></textarea>
 
 <h3>For Hosted Blogs</h3>
@@ -80,11 +80,11 @@ permalink: /join/
     let codeType = document.querySelector('input[name="webring-type"]:checked').value;
     let website = encodeURIComponent(document.getElementById('website').value);
 
-    let code = `<a href="https://static.billhunt.dev/civictech/webring.html?dir=prev&from=${website}">&larr;</a> &#124; <a href="https://github.com/krusynth/civic-tech-webring/">Civic Tech Webring</a> &#124;  <a href="https://static.billhunt.dev/civictech/webring.html?from=${website}">&rarr;</a>`;
+    let code = `<a href="{{ '/redirect' | absolute_url }}?dir=prev&from=${website}">&larr;</a> &#124; <a href="{{ '/' | absolute_url }}">{{ site.title }}</a> &#124;  <a href="{{ '/redirect' | absolute_url }}?from=${website}">&rarr;</a>`;
 
     if(codeType == 'full') {
-      code = `This blog is part of the <a href="https://github.com/krusynth/civic-tech-webring/">Civic Tech Webring</a>. &#124; <a href="https://static.billhunt.dev/civictech/webring.html?dir=prev&from=${website}">Previous Site</a> &#124;
-    <a href="https://static.billhunt.dev/civictech/webring.html?from=${website}">Next Site</a>`;
+      code = `This blog is part of the <a href="{{ '/' | absolute_url }}">{{ site.title }}</a>. &#124; <a href="{{ '/redirect' | absolute_url }}?dir=prev&from=${website}">Previous Site</a> &#124;
+    <a href="{{ '/redirect' | absolute_url }}?from=${website}">Next Site</a>`;
     }
 
     document.getElementById('webring-html').innerHTML = '';

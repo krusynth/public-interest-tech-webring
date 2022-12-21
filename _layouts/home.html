@@ -70,12 +70,12 @@ layout: default
           To join the webring, please request to add your site through GitHub issues:
         </p>
         <p>
-          <a class="button" href="https://github.com/krusynth/civic-tech-webring/issues/new/choose">Join!</a>
+          <a class="button" href="https://github.com/{{ site.repository }}/issues/new/choose">Join!</a>
         </p>
         <p>
           After you're approved, you can show the webring links on your site by pasting the following html snippet wherever you want it to appear:
         </p>
-        <textarea class="code-snippet"><script src="https://static.billhunt.dev/civictech/webring.js"></script>
+        <textarea class="code-snippet"><script src="{{ 'webring.js' | absolute_url }}"></script>
   <script>showWebring(true);</script></textarea>
         <p>
           <a href="/join/" class="button">More Info</a>

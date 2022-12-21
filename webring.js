@@ -45,7 +45,7 @@ function showWebring(useStyles) {
 
     document.getElementById(elm).innerHTML = `<div class="CTW-container">
       <div class="CTW-intro">
-        This website is part of the <strong><a href="https://pitwebring.billhunt.dev/">Civic Tech Webring</a></strong>.
+        This website is part of the <strong><a href="{{ '/' | absolute_url }}">{{ site.title }}</a></strong>.
       </div>
 
       <nav class="CTW-nav"><ul>
