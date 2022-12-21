@@ -1,0 +1,102 @@
+---
+layout: default
+---
+<h1 class="page-title">{{ page.title }}</h1>
+
+<div class="columns">
+  <section class="column about-column">
+    <div class="row about-box">
+      <header class="row-header">
+        <h2 id="about">About</h2>
+      </header>
+      <div class="row-body">
+        <p>
+          {{ site.description }}
+        </p>
+      </div>
+    </div>
+    <div class="row members-box">
+      <header class="row-header">
+        <h2 id="members">Members</h3>
+      </header>
+      <div class="row-body">
+        <ul class="members-list">
+          {%- for member in site.data.sites %}
+            <li>
+              <a href="{{ member.url }}">{{ member.name }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="column posts-column">
+    <div class="row posts-box">
+      <header class="row-header">
+        <h2 id="recent-posts">Recent Posts</h2>
+      </header>
+      <div class="row-body">
+        {% assign last_date = 0 %}
+        {% for post in site.data.feed limit: 10 %}
+          {% if last_date != post.published %}
+            <span class="post-date">{{ post.published | date_to_long_string }}</span>
+          {% endif %}
+          <article class="post">
+            <header class="post-header">
+              <span class="post-title">
+                <a href="{{ post.url }}">
+                  {{ post.site_name }} – {{ post.title }}
+                </a>
+              </span>
+            </header>
+            <div class="post-body">
+              {{ post.content | replace: "</p><p>", "  " | strip_html | truncatewords: 50 }}
+            </div>
+          </article>
+          {% assign last_date = post.published %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="column action-column">
+    <div class="row join-box">
+      <header class="row-header">
+        <h2 id="join">Join</h2>
+      </header>
+      <div class="row-body">
+        <p>
+          To join the webring, please request to add your site through GitHub issues:
+        </p>
+        <p>
+          <a class="button" href="https://github.com/krusynth/civic-tech-webring/issues/new/choose">Join!</a>
+        </p>
+        <p>
+          After you're approved, you can show the webring links on your site by pasting the following html snippet wherever you want it to appear:
+        </p>
+        <textarea class="code-snippet"><script src="https://static.billhunt.dev/civictech/webring.js"></script>
+  <script>showWebring(true);</script></textarea>
+        <p>
+          <a href="/join/" class="button">More Info</a>
+        </p>
+      </div>
+    </div>
+    <div class="row subscribe-box">
+      <header class="row-header">
+        <h2 id="members">Subscribe</h2>
+      </header>
+      <div class="row-body">
+        <p class="instructions">
+           Modern RSS readers <em>should</em> let you subscribe directly to the url below, so that when new blogs are added to the webring your subscription will be updated automatically.
+        </p>
+        <p>
+          If your RSS reader doesn't support this feature, simply download the file and import it based on the instructions your reader provides - but you may need to check back here from time to time for any updates.
+        </p>
+        <p>
+          <a href="/feeds.opml" class="button">Subscribe!</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,438 @@
+---
+---
+
+/*** Variables ***/
+/** Colors **/
+
+$black: #0c0000;
+$gray: #474542;
+$gray-light: lighten($gray, 15%);
+$white: #fff7f3;
+$orange: #e9603c;
+$blue: #25a9e9;
+
+/** Sizes **/
+$page-width: 1140px;
+$column-width: 380px;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+
+$grid-gutter-width: 15px;
+
+$border-width: 3px;
+
+/** Fonts **/
+
+@font-face {
+  font-family: "Silkscreen";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://static.billhunt.dev/assets/fonts/silkscreen/silkscreen-regular.woff2") format("woff2"),
+    url("https://static.billhunt.dev/assets/fonts/silkscreen/silkscreen-regular.woff") format("woff"),
+    url("https://static.billhunt.dev/assets/fonts/silkscreen/silkscreen-regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Silkscreen";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://static.billhunt.dev/assets/fonts/silkscreen/silkscreen-800.woff2") format("woff2"),
+    url("https://static.billhunt.dev/assets/fonts/silkscreen/silkscreen-800.woff") format("woff"),
+    url("https://static.billhunt.dev/assets/fonts/silkscreen/silkscreen-800.ttf") format("truetype"); }
+
+%font-standard {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+%font-accent {
+  font-family: Silkscreen, monospace;
+}
+
+/** Reusable Components **/
+
+%col-to-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+  }
+}
+
+%shadow-float {
+  box-shadow: 0px 7px 0px 5px rgba(00,00,00,0.4);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/*** Tag Styles ***/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $gray;
+  color: $black;
+  @extend %font-standard;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 0.75em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %font-accent;
+  margin: 0;
+  padding: 0;
+
+}
+
+a, a:hover, a:visited, a:active {
+  color: $blue;
+}
+
+a.button {
+  @extend %font-accent;
+
+
+  text-decoration: none;
+  padding: 2px 3px;
+
+  background-color: $blue;
+  color: $black;
+  border: $border-width solid $black;
+
+  &:hover {
+    background: linear-gradient(-45deg,
+      $blue,
+      lighten($blue, 30%) 40%,
+      $blue 50%,
+      lighten($blue, 30%) 90%
+    );
+    background-size: 400% 400%;
+    animation: gradient 0.5s ease infinite alternate;
+  }
+
+  &:not(.nav-link) {
+    box-shadow: 3px 3px 0px 0px rgba(00,00,00,0.4);
+    transition: all ease-in-out 0.25s;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    &:hover {
+      box-shadow: 0px 0px 0px 0px rgba(00,00,00,0.4);
+      top: 2px;
+      left: 2px;
+    }
+  }
+
+}
+
+
+
+textarea {
+  width: 100%;
+  border: $border-width solid $black;
+}
+
+form {
+  border: $border-width solid $black;
+}
+
+fieldset {
+  border: none;
+  & + & {
+    border-top: $border-width dotted $gray;
+
+  }
+}
+
+/*** Key Sections ***/
+
+/** Header **/
+.header {
+  background-color: $black;
+  color: $white;
+
+  @extend %col-to-row;
+  align-items: center;
+
+  margin-bottom: $grid-gutter-width * 2;
+}
+
+.navbar-brand {
+  text-decoration: none;
+}
+
+.brand-letter {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  text-align: center;
+  line-height: 75px;
+  font-size: 3rem;
+  font-weight: bold;
+
+  &:nth-child(odd) {
+    background-color: $blue;
+    color: $black;
+  }
+  &:nth-child(even) {
+    background-color: $black;
+    color: $blue;
+  }
+}
+
+.about-description {
+  width: 236px;
+  text-align: center;
+  color: $blue;
+  text-transform: lowercase;
+  font-size: 1rem;
+  padding: 0 0 3px;
+}
+
+
+.navbar-nav {
+  @extend %font-accent;
+  list-style: none;
+  padding: 0 $grid-gutter-width;
+  display: flex;
+  flex-direction: row;
+  gap: $grid-gutter-width;
+}
+
+.nav-link {
+  @extend .button;
+  box-shadow: 0 0 0 $border-width $blue;
+  padding: 5px 7px;
+}
+
+/** Body **/
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: $grid-gutter-width;
+
+  @media (min-width: $breakpoint-md) {
+    width: $page-width;
+    margin: 0 auto (2 * $grid-gutter-width);
+    display: grid;
+    grid-template-columns: 20% 55% 25%;
+  }
+}
+
+.column {
+
+}
+
+.row {
+  padding: 0;
+  & + & {
+    margin-top: $grid-gutter-width;
+    @media (min-width: $breakpoint-md) {
+      margin-top: 30px;
+    }
+  }
+}
+
+
+.row-body {
+  padding: 0 $grid-gutter-width $grid-gutter-width;
+  margin: 0;
+  border: $border-width solid $black;
+  background-color: $white;
+  text-align: justify;
+}
+
+.row-header {
+  background-color: $blue;
+  border: $border-width solid $black;
+  border-bottom: none;
+  color: $black;
+  // @extend %shadow-float;
+  padding: 0 $grid-gutter-width;
+}
+
+.about-column .row {
+  @media (min-width: $breakpoint-md) {
+    position: relative;
+    margin-right: -30px;
+
+    .row-header {
+      box-shadow: -7px -2px 0px 5px rgba(00,00,00,0.4);
+      margin-right: -30px;
+      /* Rotation */
+      position: relative;
+      z-index: 2;
+      transform-origin: bottom right;
+      transform: translateX(-100%) translateY(0%) rotate(-90deg);
+      display: inline-block;
+    }
+
+    .row-body {
+      box-shadow: 0px 7px 0px 5px rgba(00,00,00,0.4);
+      padding-right: 30px;
+      /* Rotation */
+      min-height: 10rem;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.about-box {
+  @media (min-width: $breakpoint-md) {
+    margin-top: 70px;
+  }
+}
+
+.posts-box {
+  box-shadow: 0px 7px 0px 5px rgba(00,00,00,0.4);
+  .row-header {
+    background-color: $orange;
+  }
+}
+
+.posts-column .row {
+  @media (min-width: $breakpoint-md) {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.action-column .row {
+  @media (min-width: $breakpoint-md) {
+    margin-left: -30px;
+    margin-top: 40px;
+    text-align: right; /* Temporary positioning just so the header moves right */
+
+    .row-header {
+      box-shadow: 7px -2px 0px 5px rgba(00,00,00,0.4);
+      // margin-right: -30px;
+      /* Rotation */
+      position: relative;
+      z-index: 2;
+      transform-origin: bottom left;
+      transform: translateX(100%) translateY(0%) rotate(90deg);
+      display: inline-block;
+    }
+
+    .row-body {
+      box-shadow: 0px 7px 0px 5px rgba(00,00,00,0.4);
+      padding-left: 30px;
+      /* Rotation */
+      min-height: 10rem;
+      position: relative;
+      z-index: 1;
+    }
+
+  }
+}
+
+
+/* Roundabout */
+$border-round: 15px;
+
+.about-column .row {
+  .row-header {
+    border-top-right-radius: ($border-round - ($border-width + 1));
+  }
+}
+
+.posts-box {
+  border-top-left-radius: $border-round;
+  border-top-right-radius: $border-round;
+  .row-header {
+    border-top-left-radius: ($border-round - ($border-width + 1));
+    border-top-right-radius: ($border-round - ($border-width + 1));
+  }
+}
+
+.action-column .row {
+  .row-header{
+    border-top-left-radius: ($border-round - ($border-width + 1));
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .row {
+    border-top-left-radius: $border-round;
+    border-top-right-radius: $border-round;
+    .row-header {
+      border-top-left-radius: ($border-round - ($border-width + 1));
+      border-top-right-radius: ($border-round - ($border-width + 1));
+    }
+  }
+}
+
+/** Interior Pages **/
+
+.post-single {
+  @media (min-width: $breakpoint-md) {
+    width: $page-width;
+    margin: 0 auto (2 * $grid-gutter-width);
+  }
+  padding: 0;
+  border: $border-width solid $black;
+  background-color: $white;
+  border-top-left-radius: $border-round;
+  border-top-right-radius: $border-round;
+
+  .post-header {
+    padding: 0 $grid-gutter-width;
+    border-top-left-radius: ($border-round - ($border-width + 1));
+    border-top-right-radius: ($border-round - ($border-width + 1));
+    border-bottom: $border-width solid $black;
+    background-color: $blue;
+    color: $black;
+  }
+
+  .post-content {
+    padding: 0 $grid-gutter-width $grid-gutter-width;
+  }
+}
+
+/** Footer **/
+
+.footer {
+  border: $border-width solid $black;
+  background-color: $white;
+  margin: $grid-gutter-width auto;
+  padding: $grid-gutter-width;
+  @media (min-width: $breakpoint-md) {
+    width: $page-width;
+  }
+}
+
+/*** Page-Specific Styles ***/
+
+
+.post-date {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.post {
+  margin-bottom: 0.25rem;
+}
+
+.page-home .page-title {
+  display: none;
+}
+
+.members-list {
+  padding-left: 1rem;
+}

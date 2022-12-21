@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{ page.lang |default: site.lang | default: 'en' }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ page.title }} - {{ site.title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+        <link rel="alternate" type="application/atom+xml" title="{{ site.name }} - All Content" href="{{ '/feed.xml' | absolute_url }}" />
+        <link rel="meta" type="application/rdf+xml" title="FOAF" href="{{ '/foaf.rdf' | absolute_url }}" />
+        <link rel="alternate" type="text/x-opml" title="{{ site.name }} - Feed Subscription" href="{{ '/feeds.opml' | absolute_url }}" />
+
+    </head>
+    <body class="page-{{ page.title | slugify }}">
+      <nav class="navbar header">
+        <div class="branding">
+          <a class="navbar-brand" rel="author" href="/" up-follow>
+            <span class="brand-letter">p</span>
+            <span class="brand-letter">i</span>
+            <span class="brand-letter">t</span>
+          </a>
+          <div class="about-description">
+            {{ site.title}}
+          </div>
+        </div>
+
+        <div class="navlink-container">
+          <ul class="nav navbar-nav nav-pages">
+            <li class="nav-item nav-page">
+              <a class="nav-link" href="{{ '/#about' | relative_url }}" up-follow>About</a>
+            </li>
+            <li class="nav-item nav-page">
+              <a class="nav-link" href="{{ '/#recent-posts' | relative_url }}" up-follow>Recent Posts</a>
+            </li>
+            <li class="nav-item nav-page">
+              <a class="nav-link" href="{{ '/#join' | relative_url }}" up-follow>Join</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="content main" id="main" up-main>
+        {{ content }}
+      </section>
+
+      <footer class="footer">
+        <a href="https://github.com/{{ site.repository }}">Contribute to this webring on GitHub</a>
+      </footer>
+    </body>
+</html>
