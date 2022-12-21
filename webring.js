@@ -1,9 +1,11 @@
+---
+---
 document.write('<div id="ctwebring"></div>');
 
 function showWebring(useStyles) {
   let elm = 'ctwebring';
 
-  const url = 'https://raw.githubusercontent.com/krusynth/civic-tech-webring/main/list.json';
+  const url = '{{ site.url }}{{ site.baseurl }}list.json';
 
   let req = new XMLHttpRequest();
   req.open('GET', url, true);
@@ -43,7 +45,7 @@ function showWebring(useStyles) {
 
     document.getElementById(elm).innerHTML = `<div class="CTW-container">
       <div class="CTW-intro">
-        This website is part of the <strong><a href="https://github.com/krusynth/civic-tech-webring/">Civic Tech Webring</a></strong>.
+        This website is part of the <strong><a href="https://pitwebring.billhunt.dev/">Civic Tech Webring</a></strong>.
       </div>
 
       <nav class="CTW-nav"><ul>

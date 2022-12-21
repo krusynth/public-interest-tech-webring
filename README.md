@@ -1,6 +1,6 @@
-# Civic Tech Webring
+# Public Interest Tech Webring
 
-The **Civic Tech Webring** is a collection of blogs dedicated to civic tech, public interest tech, government tech policy, and similar topics.  You can [view all of the members on the main page](https://billhunt.dev/civic-tech-webring/).
+The **Public Interest Tech Webring** is a collection of blogs dedicated to civic tech, public interest tech, government tech policy, and similar topics.  You can [view all of the members on the main page](https://pitwebring.billhunt.dev/).
 
 ## Joining
 
@@ -14,41 +14,20 @@ You may request your site to be added to the webring if it meets the following c
 
 * The primary content must be free and accessible. You may not require a user to login, create an account, or pay to view your posts.
 
-* Your site must have a working RSS feed of your posts that's discoverable (`link` tag in the head or similar).
+* We strongly recommend you have a working RSS feed of your posts that's discoverable (`link` tag in the head or similar).
 
 * You must display the webring banner on your blog, preferably in the header or footer of each page.
 
 ### How to Join
 
-To join the webring, please [open a request to add a new site through GitHub issues](https://github.com/krusynth/civic-tech-webring/issues/new/choose).
+To join the webring, please open a request to add a new site through GitHub issues.
 
-### Adding the Banner
+After you're approved, check out the Join page on the main website to get your webring code snippet.
 
-#### Self-Hosted Websites
-You can show the webring on your site by pasting the following html snippet wherever you want it to appear:
-
-```
-  <script src="https://static.billhunt.dev/civictech/webring.js"></script>
-  <script>showWebring(true);</script>
-```
-
-If you'd like to disable the default styles, you can use this snippet instead:
-
-```
-  <script src="https://static.billhunt.dev/civictech/webring.js"></script>
-  <script>showWebring();</script>
-```
-
-(You can, of course, also [download the `webring.js` file from GitHub](https://github.com/krusynth/civic-tech-webring/blob/main/webring.js) and host it yourself, but it'll be up to you to keep this file up-to-date as changes are made!)
-
-
-#### Hosted Blogs
-
-If you're using a hosted website which does not allow JavaScript, you can use a static version instead, either on your bio and/or each post.  You can [use this tool to generate the code](https://billhunt.dev/civic-tech-webring/).
 
 ## This Repo
 
-This repo contains the following files which are used to serve the webring:
+This repo contains both the Jekyll page for the webring website itself, as well as the following files which are used to serve the webring to member sites:
 
 * [list.json](list.json) - The list of member sites.
 * [webring.js](webring.js) - The main JavaScript file for showing the webring.

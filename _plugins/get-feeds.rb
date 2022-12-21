@@ -9,9 +9,9 @@ module Jekyll
     priority :low
 
     def generate(site)
-      source = Jekyll.configuration({})['sources']
+      # Use our local list.json file.
+      sources = JSON.parse(File.read('list.json'));
 
-      sources = get_sources(source)
       site.data['sites'] = sources['sites']
 
       site.data['feed'] = Array.new

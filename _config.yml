@@ -31,8 +31,6 @@ repository: krusynth/civic-tech-webring
 # plugins:
 #   -
 
-sources: https://raw.githubusercontent.com/krusynth/civic-tech-webring/main/list.json
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
