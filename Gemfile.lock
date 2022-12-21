@@ -54,6 +54,8 @@ GEM
     mercenary (0.4.0)
     nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.10-x86_64-linux)
+      racc (~> 1.4)
     oga (3.4)
       ast
       ruby-ll (~> 2.1)
