@@ -83,7 +83,7 @@ module Jekyll
       # We may or may not have a valid url. If we don't, don't worry.
       begin
         rss = Net::HTTP.get(URI(url))
-        feed = Feedjira.parse(rss)
+        feed = Feedjira.parse(rss.force_encoding("UTF-8"))
       rescue
         return
       end

@@ -39,6 +39,11 @@ layout: default
       <div class="row-body">
         {% assign last_date = 0 %}
         {% for post in site.data.feed limit: 10 %}
+
+        {%- comment %} ### Only show posts in the last 30 days ### {% endcomment -%}
+        {%- assign thirtydays = 'now' | date: '%s' | minus: 2592000 -%}
+        {%- assign postdate = post.published | date: '%s' | minus: 0-%}
+        {%- if postdate > thirtydays -%}
           {% if last_date != post.published %}
             <span class="post-date">{{ post.published | date_to_long_string }}</span>
           {% endif %}
@@ -55,6 +60,7 @@ layout: default
             </div>
           </article>
           {% assign last_date = post.published %}
+        {% endif %}
         {% endfor %}
       </div>
     </div>
