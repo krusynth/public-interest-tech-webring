@@ -17,6 +17,12 @@
       "url": "https://hunterowens.net/",
       "author": "Hunter Owens <hunter@hunterowens.net>",
       "rss": "https://hunterowens.net/feed.xml"
+    },
+    {
+      "name": "Jon Camfield",
+      "url": "https://www.joncamfield.com/",
+      "author": "Jon Camfield <jon@joncamfield.com>",
+      "rss": " https://www.joncamfield.com/feed"
     }
   ]
 }
