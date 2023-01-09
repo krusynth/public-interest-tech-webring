@@ -22,7 +22,13 @@
       "name": "Jon Camfield",
       "url": "https://www.joncamfield.com/",
       "author": "Jon Camfield <jon@joncamfield.com>",
-      "rss": " https://www.joncamfield.com/feed"
+      "rss": "https://www.joncamfield.com/feed"
+    },
+    {
+      "name": "Civic Innovations",
+      "url": "https://civic.io/",
+      "author": "Mark Headd <mheadd@gmail.com>",
+      "rss": "https://civic.io/feed/"
     }
   ]
 }
