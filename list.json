@@ -29,6 +29,12 @@
       "url": "https://civic.io/",
       "author": "Mark Headd <mheadd@gmail.com>",
       "rss": "https://civic.io/feed/"
+    },
+    {
+      "name": "Bryce Willey",
+      "url": "https://brycewilley.xyz/",
+      "author": "Bryce Willey <bryce.steven.willey@gmail.com>",
+      "rss": "https://brycewilley.xyz/feed.xml"
     }
   ]
 }
