@@ -35,6 +35,12 @@
       "url": "https://brycewilley.xyz/",
       "author": "Bryce Willey <bryce.steven.willey@gmail.com>",
       "rss": "https://brycewilley.xyz/feed.xml"
+    },
+    {
+      "name": "Justin Gosses",
+      "url": "https://justingosses.com/",
+      "author": "Justin Gosses <Jgosses@hotmail.com>",
+      "rss": "https://justingosses.com/feed.xml"
     }
   ]
 }
