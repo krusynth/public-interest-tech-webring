@@ -41,6 +41,12 @@
       "url": "https://justingosses.com/",
       "author": "Justin Gosses <Jgosses@hotmail.com>",
       "rss": "https://justingosses.com/feed.xml"
+    },
+    {
+      "name": "Matt Bailey",
+      "url": "https://mattmattmatt.org/",
+      "author": "Matt Bailey <matt@mattmattmatt.org>",
+      "rss": "https://mattmattmatt.org/feed.xml"
     }
   ]
 }
