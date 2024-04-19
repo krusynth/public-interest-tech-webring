@@ -70,7 +70,9 @@ permalink: /join/
   <div class="webring-generated" id="webring-generated"></div>
 </form>
 
-
+<p>
+  Last, you can also use this button to link to this page:<br><br><img src="/assets/images/pitwebring-88x31.gif" alt="Public Interest Tech Webring">
+</p>
 
 <script>
   function updateCode(e) {

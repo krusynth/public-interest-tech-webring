@@ -255,6 +255,10 @@ fieldset {
   text-align: justify;
 }
 
+.row-body *:last-child {
+  margin-bottom: 0;
+}
+
 .row-header {
   background-color: $blue;
   border: $border-width solid $black;
