@@ -47,6 +47,17 @@
       "url": "https://mattmattmatt.org/",
       "author": "Matt Bailey <matt@mattmattmatt.org>",
       "rss": "https://mattmattmatt.org/feed.xml"
+    },
+    {
+      "name": "Anita Cheng",
+      "url": "https://anitacheng.com/",
+      "author": "Anita Cheng <design@anitacheng.com>",
+      "rss": "https://anitacheng.com/feed.xml"
+    },
+    {
+      "name": "eric.place",
+      "url": "https://eric.place",
+      "author": "Eric Gade <eric.gade@gmail.com>"
     }
   ]
 }
